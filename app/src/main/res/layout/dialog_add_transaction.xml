@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/dialog_bg"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <!-- Transaction Type Toggle -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_income"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_selector"
+            android:buttonTint="@color/dark_grey"
+            android:gravity="center"
+            android:paddingEnd="20dp"
+            android:text="Income (Credit)"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/very_light_grey"
+            android:textColorLink="@color/dark_grey" />
+
+        <RadioButton
+            android:id="@+id/rb_expense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_selector"
+            android:buttonTint="@color/dark_grey"
+            android:gravity="center"
+            android:paddingEnd="20dp"
+            android:text="Expense (Debit)"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/very_light_grey"
+            android:textColorLink="@color/dark_grey" />
+    </RadioGroup>
+
+    <!-- Amount Input Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Category Icon -->
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="8dp"
+            android:background="#09FFFFFF"
+            android:cropToPadding="false"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/ic_category" />
+
+        <!-- "Enter Text" Field with Underline -->
+        <LinearLayout
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- Underline for "Enter Text" -->
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@null"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:hint="Enter Text"
+                android:inputType="text"
+                android:paddingStart="5dp"
+                android:paddingTop="10dp"
+                android:textColor="#777777"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@android:color/black" />
+        </LinearLayout>
+
+        <!-- "Amount" Field with Underline -->
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- Underline for "Amount" -->
+
+            <EditText
+                android:id="@+id/et_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="Amount"
+                android:inputType="numberDecimal"
+                android:paddingStart="5dp"
+                android:paddingTop="14.5dp"
+                android:textColor="#777777"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Submit Button -->
+        <ImageButton
+            android:id="@+id/btn_submit"
+            android:layout_width="99dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="@null"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_check" />
+
+    </LinearLayout>
+
+    <!-- Description (Optional) -->
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_bg"
+        android:drawableLeft="@drawable/editing_32px"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins"
+        android:hint="Describe Here(optional)"
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="14sp" />
+
+</LinearLayout>

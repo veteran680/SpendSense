@@ -1,0 +1,7 @@
+<resources>
+    <style name="CustomTabTextStyle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+</resources>
